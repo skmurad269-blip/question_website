@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Question</title>
+
+<style>
+
+body{
+font-family: Arial;
+text-align:center;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#89f7fe,#66a6ff);
+overflow:hidden;
+}
+
+h1{
+font-size:40px;
+color:white;
+text-shadow:2px 2px 8px black;
+}
+
+button{
+padding:15px 30px;
+font-size:20px;
+margin:10px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+#yes{
+background:#ff4d6d;
+color:white;
+}
+
+#no{
+background:#333;
+color:white;
+position:absolute;
+}
+
+#message{
+font-size:35px;
+color:white;
+margin-top:20px;
+display:none;
+text-shadow:2px 2px 8px black;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Do you have any boyfriend? 😏</h1>
+
+<div>
+<button id="yes">Yes</button>
+<button id="no">No</button>
+</div>
+
+<div id="message">I knew it, wait, I'm telling your mother. 😆</div>
+
+<script>
+
+let noBtn=document.getElementById("no");
+
+noBtn.addEventListener("mouseover",function(){
+
+let x=Math.random()*window.innerWidth;
+let y=Math.random()*window.innerHeight;
+
+noBtn.style.left=x+"px";
+noBtn.style.top=y+"px";
+
+});
+
+document.getElementById("yes").onclick=function(){
+document.getElementById("message").style.display="block";
+}
+
+</script>
+
+</body>
+</html>
